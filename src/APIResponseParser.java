@@ -11,8 +11,8 @@ public class APIResponseParser {
 	 *            text to be parsed
 	 * @return Book instance containing parsed data
 	 */
-	public static BookClient parse(String response) {
-		BookClient book = new BookClient();
+	public static Book parse(String response) {
+		Book book = new Book();
 		String endRule = "<";
 		
 		String startRule = "<title>";
