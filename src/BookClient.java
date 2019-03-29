@@ -1,4 +1,4 @@
-	public class Book {		
+	public class BookClient {		
         private String title;
 		private String author;
 		private int publicationYear;

@@ -1,5 +1,7 @@
 package com.henry.ugokwe.oop.p1;
 
+import com.henry.ugokwe.oop.p2.C2;
+
 public class B1 {
 public static void main(String []args){
 	System.out.println("A1.defaultMember: "+A1.defaultMember);

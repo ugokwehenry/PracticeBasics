@@ -26,7 +26,7 @@ public static void main(String []args){
 
 	Student s4 = new Student.Builder(studentIds[3], "Ikechukwu").build();
 	
-	ArrayList<Student> list = new ArrayList<>();
+	ArrayList<Student> list = new ArrayList<Student>();
 	list.add(s4);
 	
 	//Print each student's name
