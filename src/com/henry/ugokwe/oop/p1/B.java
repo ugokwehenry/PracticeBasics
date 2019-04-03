@@ -1,7 +1,6 @@
 package com.henry.ugokwe.oop.p1;
 
 public interface B {
-
-	String VAL = null;
-
+	int VAL = TestClient.getVal();
+	void foo();
 }
