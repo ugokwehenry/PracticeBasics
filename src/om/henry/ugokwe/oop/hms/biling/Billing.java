@@ -6,7 +6,8 @@ public class Billing {
         
         HealthInsurancePlan patientInsurancePlan = patient.getInsurancePlan();
         if (patientInsurancePlan instanceof PlatinumPlan){
-        	double insuredAmount = amount * 0.9;
+        	double insuredAmount = amount * patientInsurancePlan.getCoverage();
+        	System.out.println("coverage: " +insuredAmount);
         	double uninsuredAmount = ((amount - insuredAmount) - 50);
         	payments  = new double []{insuredAmount, uninsuredAmount};
         }else if(patientInsurancePlan instanceof GoldPlan){
@@ -14,7 +15,8 @@ public class Billing {
         	double uninsuredAmount = ((amount - insuredAmount) - 40);
         	payments  = new double []{insuredAmount, uninsuredAmount};
         }else if(patientInsurancePlan instanceof SilverPlan){
-        	double insuredAmount = amount * 0.7;
+        	double insuredAmount = amount * patientInsurancePlan.getCoverage();
+        	System.out.println("coverage: " +insuredAmount);
         	double uninsuredAmount = ((amount - insuredAmount) - 30);
         	payments  = new double []{insuredAmount, uninsuredAmount};
         }else if(patientInsurancePlan instanceof BronzePlan){

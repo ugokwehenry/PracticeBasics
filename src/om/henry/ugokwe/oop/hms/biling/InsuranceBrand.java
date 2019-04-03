@@ -1,5 +1,6 @@
 package om.henry.ugokwe.oop.hms.biling;
 
-public class InsuranceBrand {
-
+public interface InsuranceBrand {
+	public abstract double computeMonthlyPremium(HealthInsurancePlan insurancePlan,
+			int age, boolean smoking);
 }

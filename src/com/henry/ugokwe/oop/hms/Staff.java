@@ -5,6 +5,12 @@ public class Staff extends User{
 	private int yearsOfExperience;
 	private String description;
 	private double salary;
+	public  int id = 2;
+	
+	public void printId(){
+		System.out.println("id: "+id);
+		System.out.println("super.id: "+super.id);
+	}
 	public long getStaffId() {
 		return staffId;
 	}
@@ -32,7 +38,29 @@ public class Staff extends User{
 	public void printUserType(){
 		System.out.println("Staff");
 	}
-	public void postAReview(){
+	public Review postAReview(String reviewText){
 		System.out.println("Staff: postAReview");
+		Review review = super.postAReview(reviewText);
+		review.setApproved(true);
+		return review;
+	}
+	
+	public void instanceMethod(int d){
+		System.out.println("Staff: instanceMethod");
+	}
+	public void instanceMethod(Staff d){
+		System.out.println("Staff: instanceMethod");
+	}
+	public Staff(){
+		 userType = "Staff";
+		System.out.println("Staff Constructor 1");
+	}
+	public Staff(int id){
+		this();
+		this.id  = id;
+		System.out.println("Staff Constructor 2");
+	}
+	public  void testStatic(int x){
+	System.out.println("Staff testStatic");
 	}
 }

@@ -1,6 +1,6 @@
 package om.henry.ugokwe.oop.hms.biling;
 
-public class HealthInsurancePlan {
+public abstract class HealthInsurancePlan {
  // Code for 'coverage' field goes here
     private double coverage;
     // Don't worry about the below code and also the InsuranceBrand class
@@ -21,4 +21,5 @@ public class HealthInsurancePlan {
 	public void setCoverage(double coverage) {
 		this.coverage = coverage;
 	}
+	public abstract double computeMonthlyPremium(double salary, int age, boolean smoking);
 }

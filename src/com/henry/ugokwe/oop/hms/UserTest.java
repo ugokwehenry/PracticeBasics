@@ -6,7 +6,7 @@ public void printUserType(User u){
 }
 public static void main(String[] args){
 	//part 1
-	User user = new User();
+	/*User user = new User();
 	User staff = new Staff();
 	User editor = new Editor();
 	
@@ -23,7 +23,10 @@ public static void main(String[] args){
 	UserTest ut1 = new UserTest();
 	//ut1.approveReview(new Staff());
 	ut1.approveReview(new Editor());
+	*/
 	
+	User staff = new Staff();
+	staff.testStatic(3);
 }
 
 public void approveReview(Staff s){

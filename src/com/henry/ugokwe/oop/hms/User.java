@@ -1,10 +1,16 @@
 package com.henry.ugokwe.oop.hms;
 
 public class User {
-private long id;
+public  long id;
 private String firstName;
 private String gender;
 private String email;
+
+public String userType = "User";
+
+public User() {
+	System.out.println("User Constructor");
+}
 public long getId() {
 	return id;
 }
@@ -34,11 +40,26 @@ public void printUserType(){
 }
 public void saveWebLink(){
 	System.out.println("User: saveWebLink");
-	postAReview();
+	postAReview("");
 }
-public void postAReview() {
+public Review postAReview(String reviewText) {
 	// TODO Auto-generated method stub
 	System.out.println("User: postAReview");
+	Review review = new Review(reviewText);
+	return review;
 }
-
+//Method binding demo
+public static void staticMethod(){
+	
+}
+public void instanceMethod(double d){
+	System.out.println("User: instanceMethod");
+}
+public void instanceMethod(User u){
+	System.out.println("User: instanceMethod");
+}
+public  void testStatic(int x){
+	System.out.println("User Static");
+	
+}
 }

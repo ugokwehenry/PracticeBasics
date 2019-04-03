@@ -5,6 +5,8 @@ private long id;
 private String firstName;
 private String gender;
 private String email;
+private boolean insured;
+private HealthInsurancePlan insurancePlan = null;
 public long getId() {
 	return id;
 }
@@ -40,5 +42,16 @@ public void postAReview() {
 	// TODO Auto-generated method stub
 	System.out.println("User: postAReview");
 }
-
+public boolean isInsured() {
+	return insured;
+}
+public void setInsured(boolean insured) {
+	this.insured = insured;
+}
+public HealthInsurancePlan getInsurancePlan() {
+	return insurancePlan;
+}
+public void setInsurancePlan(HealthInsurancePlan insurancePlan) {
+	this.insurancePlan = insurancePlan;
+}
 }
